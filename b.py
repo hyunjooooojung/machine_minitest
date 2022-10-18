@@ -30,3 +30,22 @@ cv2.imwrite('result4.png', tmp_img)
 tmp_img = cv2.imread('picture.jpg')
 cv2.rectangle(tmp_img, (int(results.xyxy[0][4][0].item()), int(results.xyxy[0][4][1].item())), (int(results.xyxy[0][4][2].item()), int(results.xyxy[0][4][3].item())), (255,255,255))
 cv2.imwrite('result5.png', tmp_img)
+
+
+
+#사람을 찾아 하얀색 네모를 그려 result.png 로 저장
+# import torch
+# import cv2
+# model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
+
+# img = cv2.imread('people.jpg')
+
+# results = model(img)
+# result = results.pandas().xyxy[0].to_numpy()
+# result = [ item for item in result if item[6] == 'person']
+
+# tmp_img = cv2.imread('people.jpeg')
+
+# for i, item in enumerate(result):
+#     cv2.rectangle(tmp_img, (int(item[0]), int(item[1])), (int(item[2]), int(item[3])), (255,255,255))
+# cv2.imwrite('result.png', tmp_img)

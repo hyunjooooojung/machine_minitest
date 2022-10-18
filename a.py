@@ -10,3 +10,7 @@ results = model(imgs)
 
 results.save()
 
+# 이미지 크기 확인
+# import cv2
+# img = cv2.imread('people.jpg')
+# print(img.shape)
